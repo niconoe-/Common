@@ -1,0 +1,18 @@
+{
+  "name": "projet-normandie/common",
+  "type": "library",
+  "description": "Common module",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Verlhac Gaëtan",
+      "email": "viviengaetan69@gmail.com"
+    }
+  ],
+  "require": {
+  },
+  "autoload": {
+    "psr-4": { "Normandie\\Component\\Common\\": "" }
+  }
+}
