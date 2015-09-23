@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<ruleset name="projet-normandie/Common">
+ <description>Ruleset for projet-normandie, module Common.</description>
+ <arg name="tab-width" value="4"/>
+ <rule ref="PSR2"/>
+</ruleset>
