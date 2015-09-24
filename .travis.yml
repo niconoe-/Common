@@ -17,15 +17,14 @@ matrix:
   fast_finish: true
   include:
     - php: 5.5
-      env:
-        - EXECUTE_CS_CHECK=true
     - php: 5.6
       env:
         - EXECUTE_TEST_COVERALLS=true
     - php: 7
+      env:
+        - EXECUTE_CS_CHECK=true
     - php: hhvm
   allow_failures:
-    - php: 7
     - php: hhvm
 
 before_install:
@@ -39,7 +38,7 @@ install:
 script:
   - if [[ $EXECUTE_TEST_COVERALLS == 'true' ]]; then ./vendor/bin/phpunit --coverage-clover clover.xml ; fi
   - if [[ $EXECUTE_TEST_COVERALLS != 'true' ]]; then ./vendor/bin/phpunit ; fi
-  - if [[ $EXECUTE_CS_CHECK == 'true' ]]; then ./vendor/bin/php-cs-fixer fix -v --diff --dry-run ; fi
+  - if [[ $EXECUTE_CS_CHECK == 'true' ]]; then ./vendor/bin/phpcs --extensions=php --standard=ruleset.xml; fi
 
 after_script:
   - if [[ $EXECUTE_TEST_COVERALLS == 'true' ]]; then ./vendor/bin/coveralls ; fi
