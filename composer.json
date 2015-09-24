@@ -17,8 +17,7 @@
     "zendframework/zend-loader": "~2.5"
   },
   "require-dev": {
-    "fabpot/php-cs-fixer": "1.7.*",
-    "squizlabs/PHP_CodeSniffer": "2.3.*",
+    "squizlabs/PHP_CodeSniffer": "2.*",
     "phpunit/phpunit": "~4.0"
   },
   "autoload": {
